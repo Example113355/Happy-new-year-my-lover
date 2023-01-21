@@ -1,0 +1,13 @@
+@media (max-width: 740px) {
+    .wishes-content {
+        font-size: 12px;
+    }
+
+    .heart {
+        flex-grow: 1;
+    }
+
+    .wishes {
+        flex-grow: 4;
+    }
+}

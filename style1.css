@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 198, 198);           
+}
+
+.nav {
+    height: 40px;
+    background-color: #eb9481;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    padding-right: 12px;
+    padding-left: 16px;
+    background-color: #eb9481;
+    height:40px;
+}
+
+.nav-list li:hover {
+    opacity: 0.6;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fce3df;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.heart-icon:hover{
+    animation: beat 0.5s infinite alternate linear;
+}
+
+.heart1 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+}
+
+.container-content {
+    background-color: #f5dcb3;
+    width: 900px;
+    min-height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.show {
+    animation: display 2.5s ease forwards;
+}
+
+.header {
+    min-height: 32px;
+    background-color: rgb(255, 225, 144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h3 {
+    color: rgb(197, 67, 67);
+    font-size: 28px;
+    padding: 12px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.wishes {
+    flex-grow: 1;
+    padding: 12px;
+}
+
+.wishes-content {
+    text-indent: 20px;
+    font-size: 18px;
+}
+
+.heart {
+    animation: beat 1s alternate infinite linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.move {
+    animation: moveBack 1.25s ease forwards;
+}
+
+.cat img{
+    width: 200px;
+    height: 200px;
+}
+
+.footer {
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color:rgba(0, 0, 0, 0.6);
+
+}
+
+.copyright a:hover {
+    color:rgba(0, 0, 0, 0.4);
+}
+
+.copyright a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.open {
+    display: flex;
+}
+
+.modal-container {
+    min-height: 200px;
+    min-width: 50%;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 12px;
+    animation: modalFade 1s ease forwards;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    background-color: pink;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon {
+    margin-right: 12px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+ 
+.modal-body {
+    padding: 12px;
+}
+
+.music-item {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.music-item span {
+    margin-right: 20px;
+}
+
+@keyframes display {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveBack {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-550px);
+    }
+}
+
+@keyframes beat {
+    from {
+        transform: scale(.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
